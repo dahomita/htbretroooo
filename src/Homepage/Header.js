@@ -8,12 +8,23 @@ const Header = () => {
     textAlign: 'center',
     fontFamily: 'Courier New, monospace',
     borderBottom: '2px solid lime',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center', 
+    paddingRight: '10px', 
   };
 
   const marqueeStyle = {
     color: 'yellow',
     fontSize: '18px',
-    margin: '5px 0',
+    margin: '2px 0',
+  };
+  const centerContainerStyle = {
+    display: 'flex',
+    flexDirection: 'column', 
+    justifyContent: 'center',
+    alignItems: 'center', 
+    textAlign: 'center', 
   };
 
   const navStyle = {
@@ -38,14 +49,67 @@ const Header = () => {
     color: 'black',
   };
 
+  const buttonStyle = {
+    color: 'lime',
+    backgroundColor: 'black',
+    border: '2px solid lime',
+    padding: '10px 20px',
+    borderRadius: '5px',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    marginLeft: '10px',
+  };
+
+  const buttonHoverStyle = {
+    backgroundColor: 'lime',
+    color: 'black',
+  };
+
+
   return (
-    <header style={headerStyle}>
-      <h1>Hack The Box</h1>
-      <marquee style={marqueeStyle} scrollamount="5">
-        Welcome to Hack The Box - Where hackers thrive!
-      </marquee>
+    <header >
+    <div style={headerStyle} >
+      <div style={centerContainerStyle}>
+        <h1 >Hack The Box</h1>
+        <marquee style={marqueeStyle} scrollamount="5">
+            Your Cyber Center
+        </marquee>
+      </div>
+    </div>
+        
+    <div style={headerStyle}>
+        <a
+                href="#"
+                style={buttonStyle}
+                onMouseOver={(e) => {
+                    e.target.style.backgroundColor = buttonHoverStyle.backgroundColor;
+                    e.target.style.color = buttonHoverStyle.color;
+                }}
+                onMouseOut={(e) => {
+                    e.target.style.backgroundColor = buttonStyle.backgroundColor;
+                    e.target.style.color = buttonStyle.color;
+                }}
+                >
+                Login
+                </a>
+                <a
+                href="#"
+                style={buttonStyle}
+                onMouseOver={(e) => {
+                    e.target.style.backgroundColor = buttonHoverStyle.backgroundColor;
+                    e.target.style.color = buttonHoverStyle.color;
+                }}
+                onMouseOut={(e) => {
+                    e.target.style.backgroundColor = buttonStyle.backgroundColor;
+                    e.target.style.color = buttonStyle.color;
+                }}
+                >
+                Get Started
+                </a>
+    </div>
+    
       <nav style={navStyle}>
-        <a
+      <a
           href="#"
           style={linkStyle}
           onMouseOver={(e) => {
@@ -57,7 +121,21 @@ const Header = () => {
             e.target.style.color = linkStyle.color;
           }}
         >
-          Home
+          Products
+        </a>
+      <a
+          href="#"
+          style={linkStyle}
+          onMouseOver={(e) => {
+            e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
+            e.target.style.color = linkHoverStyle.color;
+          }}
+          onMouseOut={(e) => {
+            e.target.style.backgroundColor = linkStyle.backgroundColor;
+            e.target.style.color = linkStyle.color;
+          }}
+        >
+          Solutions
         </a>
         <a
           href="#"
@@ -71,7 +149,7 @@ const Header = () => {
             e.target.style.color = linkStyle.color;
           }}
         >
-          Challenges
+          Pricing
         </a>
         <a
           href="#"
@@ -85,7 +163,7 @@ const Header = () => {
             e.target.style.color = linkStyle.color;
           }}
         >
-          Leaderboard
+          Resources
         </a>
         <a
           href="#"
@@ -99,10 +177,25 @@ const Header = () => {
             e.target.style.color = linkStyle.color;
           }}
         >
-          Login
+          Company
         </a>
+        <a
+          href="#"
+          style={linkStyle}
+          onMouseOver={(e) => {
+            e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
+            e.target.style.color = linkHoverStyle.color;
+          }}
+          onMouseOut={(e) => {
+            e.target.style.backgroundColor = linkStyle.backgroundColor;
+            e.target.style.color = linkStyle.color;
+          }}
+        >
+          Business
+        </a>
+        
       </nav>
-    </header>
+      </header>
   );
 };
 
