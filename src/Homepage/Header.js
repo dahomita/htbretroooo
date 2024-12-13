@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 
 const Header = () => {
+
+  const [isHovered, setIsHovered] = useState(false);
+
   const headerStyle = {
     backgroundColor: 'black',
     color: 'lime',
@@ -12,6 +16,7 @@ const Header = () => {
     justifyContent: 'center',
     alignItems: 'center', 
     paddingRight: '10px', 
+    gap: '10px',
   };
 
   const marqueeStyle = {
@@ -65,6 +70,20 @@ const Header = () => {
     color: 'black',
   };
 
+  const dropdownStyle = {
+    position: 'absolute',
+    top: '100%',
+    left: 0,
+    width: '100%',
+    backgroundColor: 'black',
+    color: 'lime',
+    border: '2px solid lime',
+    padding: '10px',
+    textAlign: 'center',
+    transition: 'height 0.5s ease-in-out',
+    height: isHovered ? '200px' : '0', // Slide effect
+    overflow: 'hidden',
+  };
 
   return (
     <header >
@@ -123,20 +142,31 @@ const Header = () => {
         >
           Products
         </a>
-      <a
-          href="#"
-          style={linkStyle}
-          onMouseOver={(e) => {
-            e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-            e.target.style.color = linkHoverStyle.color;
-          }}
-          onMouseOut={(e) => {
-            e.target.style.backgroundColor = linkStyle.backgroundColor;
-            e.target.style.color = linkStyle.color;
-          }}
+        <nav
+            style={navStyle}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
-          Solutions
-        </a>
+            <a
+                href="#"
+                style={linkStyle}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
+                  e.target.style.color = linkHoverStyle.color;
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = linkStyle.backgroundColor;
+                  e.target.style.color = linkStyle.color;
+                }}
+                >
+                Solutions
+                </a>
+            <div style={dropdownStyle}>
+                <p>Product 1</p>
+                <p>Product 2</p>
+                <p>Product 3</p>
+            </div>
+        </nav>
         <a
           href="#"
           style={linkStyle}
