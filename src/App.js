@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './Homepage/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <main style={{ padding: '20px', fontFamily: 'Courier New, monospace' }}>
+        <h2>Welcome to the 90s Hack The Box!</h2>
+        <p>Explore challenges, climb the leaderboard, and hone your hacking skills.</p>
+      </main>
     </div>
   );
 }
