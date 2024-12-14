@@ -3,8 +3,6 @@ import React, {useState} from 'react';
 
 const Header = () => {
 
-  const [isHovered, setIsHovered] = useState(false);
-
   const headerStyle = {
     backgroundColor: 'black',
     color: 'lime',
@@ -70,21 +68,6 @@ const Header = () => {
     color: 'black',
   };
 
-  const dropdownStyle = {
-    position: 'absolute',
-    top: '100%',
-    left: 0,
-    width: '100%',
-    backgroundColor: 'black',
-    color: 'lime',
-    border: '2px solid lime',
-    padding: '10px',
-    textAlign: 'center',
-    transition: 'height 0.5s ease-in-out',
-    height: isHovered ? '200px' : '0', // Slide effect
-    overflow: 'hidden',
-  };
-
   return (
     <header >
     <div style={headerStyle} >
@@ -126,8 +109,9 @@ const Header = () => {
                 Get Started
                 </a>
     </div>
-    
+      
       <nav style={navStyle}>
+      
       <a
           href="#"
           style={linkStyle}
@@ -142,11 +126,7 @@ const Header = () => {
         >
           Products
         </a>
-        <nav
-            style={navStyle}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
+      
             <a
                 href="#"
                 style={linkStyle}
@@ -161,13 +141,8 @@ const Header = () => {
                 >
                 Solutions
                 </a>
-            <div style={dropdownStyle}>
-                <p>Product 1</p>
-                <p>Product 2</p>
-                <p>Product 3</p>
-            </div>
-        </nav>
-        <a
+          
+                <a
           href="#"
           style={linkStyle}
           onMouseOver={(e) => {
@@ -224,7 +199,9 @@ const Header = () => {
           Business
         </a>
         
-      </nav>
+        
+      </nav> 
+      
       </header>
   );
 };
