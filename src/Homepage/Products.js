@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import customerStoriesImage from './image/remember-geocities-v0-3s6mvjw8l4lc1.png'; 
+import businessImage from './image/lings-cars.jpg'; 
 
-const Solutions = ({isVisible}) => {
+const Products= ({isVisible}) => {
     const [isHovered, setIsHovered] = useState(false);
   const containerStyle = {
     display: 'flex', // Flexbox to align divs side by side
@@ -47,11 +47,10 @@ const Solutions = ({isVisible}) => {
     color: 'black',
   };
 
-  const solutionsStyle = {
+  const productsStyle = {
     position: 'absolute',
     top: '60px', // Adjust to be just below the header (you can change this value)
     left: '0',
-    right: '10px',
     width: '100%',
     height: '100vh', // Full height to cover the content below
     backgroundColor: 'black',
@@ -66,12 +65,12 @@ const Solutions = ({isVisible}) => {
   return (
     <div style={containerStyle}>
 
-      <div style={solutionsStyle}
+      <div style={productsStyle}
        // onMouseEnter={() => setIsHovered(true)} // Keep the popup visible when hovering
        // onMouseLeave={() => setIsHovered(false)} // Hide the popup when mouse leaves
       >
         <div style={columnStyle}>
-        <h3>Job Roles</h3>
+        <h3>Solutions for</h3>
             <div style={eachColumnStyle}>
                 <a href="#"
                 style={{ color: 'white',textDecoration: 'none',}}
@@ -82,7 +81,7 @@ const Solutions = ({isVisible}) => {
                 onMouseOut={(e) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
-                }}>Red Team</a>
+                }}>Teams</a>
                 <a onMouseOver={(e) => {
                     e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
                     e.target.style.color = linkHoverStyle.color;
@@ -91,7 +90,7 @@ const Solutions = ({isVisible}) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
                 }} href="#" style={{ color: 'white',textDecoration: 'none',}}
-                >Blue Team</a>
+                >Schools</a>
                 <a onMouseOver={(e) => {
                     e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
                     e.target.style.color = linkHoverStyle.color;
@@ -99,11 +98,11 @@ const Solutions = ({isVisible}) => {
                 onMouseOut={(e) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
-                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Purple Team</a>
+                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Individuals</a>
           </div>
       </div>
       <div style={columnStyle}>
-      <h3>Industries</h3>
+      <h3>Products we offer</h3>
             <div style={eachColumnStyle}>
                 <a href="#"
                 style={{ color: 'white',textDecoration: 'none',}}
@@ -114,7 +113,7 @@ const Solutions = ({isVisible}) => {
                 onMouseOut={(e) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
-                }}>Government</a>
+                }}>Courses & Cerfications</a>
 
                 <a onMouseOver={(e) => {
                     e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
@@ -124,7 +123,7 @@ const Solutions = ({isVisible}) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
                 }} href="#" style={{ color: 'white',textDecoration: 'none',}}
-                >Finance</a>
+                >Cyber Ranges</a>
 
                 <a onMouseOver={(e) => {
                     e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
@@ -133,7 +132,7 @@ const Solutions = ({isVisible}) => {
                 onMouseOut={(e) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
-                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Manufacturing</a>
+                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Enterprise Attack Simulations</a>
 
                 <a onMouseOver={(e) => {
                     e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
@@ -142,7 +141,7 @@ const Solutions = ({isVisible}) => {
                 onMouseOut={(e) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
-                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Healthcare</a>
+                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Gamified Team Assessments</a>
 
                 <a onMouseOver={(e) => {
                     e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
@@ -151,77 +150,20 @@ const Solutions = ({isVisible}) => {
                 onMouseOut={(e) => {
                     e.target.style.backgroundColor = linkStyle.backgroundColor;
                     e.target.style.color = linkStyle.color;
-                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Consulting</a>
+                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Workforce Exercises</a>
+                <a onMouseOver={(e) => {
+                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
+                    e.target.style.color = linkHoverStyle.color;
+                }}
+                onMouseOut={(e) => {
+                    e.target.style.backgroundColor = linkStyle.backgroundColor;
+                    e.target.style.color = linkStyle.color;
+                }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Talent Sourcing</a>
           </div>
       </div>
       <div style={columnStyle}>
-      <h3>Use Cases</h3>
-            <div style={eachColumnStyle}>
-                <a href="#"
-                style={{ color: 'white',textDecoration: 'none',}}
-                onMouseOver={(e) => {
-                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-                    e.target.style.color = linkHoverStyle.color;
-                }}
-                onMouseOut={(e) => {
-                    e.target.style.backgroundColor = linkStyle.backgroundColor;
-                    e.target.style.color = linkStyle.color;
-                }}>Technical onboarding and talent retention</a>
-                <a onMouseOver={(e) => {
-                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-                    e.target.style.color = linkHoverStyle.color;
-                }}
-                onMouseOut={(e) => {
-                    e.target.style.backgroundColor = linkStyle.backgroundColor;
-                    e.target.style.color = linkStyle.color;
-                }} href="#" style={{ color: 'white',textDecoration: 'none',}}
-                >Team capabilities benchmarking and gap analysis</a>
-                <a onMouseOver={(e) => {
-                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-                    e.target.style.color = linkHoverStyle.color;
-                }}
-                onMouseOut={(e) => {
-                    e.target.style.backgroundColor = linkStyle.backgroundColor;
-                    e.target.style.color = linkStyle.color;
-                 }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Internal and external candidate assessment</a>
-                 <a onMouseOver={(e) => {
-                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-                    e.target.style.color = linkHoverStyle.color;
-                }}
-                onMouseOut={(e) => {
-                    e.target.style.backgroundColor = linkStyle.backgroundColor;
-                    e.target.style.color = linkStyle.color;
-                 }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Emerging threats and tactic response preparation</a>
-                 <a onMouseOver={(e) => {
-                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-                    e.target.style.color = linkHoverStyle.color;
-                }}
-                onMouseOut={(e) => {
-                    e.target.style.backgroundColor = linkStyle.backgroundColor;
-                    e.target.style.color = linkStyle.color;
-                 }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Code vulnerability and risk mitigation</a>
-                 <a onMouseOver={(e) => {
-                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-                    e.target.style.color = linkHoverStyle.color;
-                }}
-                onMouseOut={(e) => {
-                    e.target.style.backgroundColor = linkStyle.backgroundColor;
-                    e.target.style.color = linkStyle.color;
-                 }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Governance and compliance</a>
-                 <a onMouseOver={(e) => {
-                    e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-                    e.target.style.color = linkHoverStyle.color;
-                }}
-                onMouseOut={(e) => {
-                    e.target.style.backgroundColor = linkStyle.backgroundColor;
-                    e.target.style.color = linkStyle.color;
-                 }} href="#" style={{ color: 'white',textDecoration: 'none',}}>Real-time breach and crisis simulation</a>
-          </div>        
-      </div>
-      <div style={columnStyle}>
-      <h3>Customer Stories</h3>
-            
-            <div style={eachColumnStyle}>
+      <h3>Academy for Business</h3>
+      <div style={eachColumnStyle}>
             <a href="#"
             onMouseOver={(e) => {
                 e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
@@ -232,8 +174,8 @@ const Solutions = ({isVisible}) => {
                 e.target.style.color = linkStyle.color;
             }}>
             <img 
-            src = {customerStoriesImage} 
-            alt="Customer Stories" 
+            src = {businessImage} 
+            alt="Business Image" 
             style={{ width: '50%', height: 'auto', marginBottom: '10px' }} 
         /> </a>
                 <a href="#"
@@ -247,10 +189,12 @@ const Solutions = ({isVisible}) => {
                     e.target.style.color = linkStyle.color;
                 }}>View all customer stories</a>
             </div>
+      
       </div>
+      
       </div>
     </div>
   );
 };
 
-export default Solutions;
+export default Products;
