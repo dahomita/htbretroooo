@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const Header = () => {
+
+const Header = ({onSolutionsHover}) => {
+
   const headerStyle = {
     backgroundColor: 'black',
     color: 'lime',
@@ -12,6 +14,8 @@ const Header = () => {
     justifyContent: 'center',
     alignItems: 'center', 
     paddingRight: '10px', 
+    gap: '10px',
+    position: 'relative', 
   };
 
   const marqueeStyle = {
@@ -65,7 +69,6 @@ const Header = () => {
     color: 'black',
   };
 
-
   return (
     <header >
     <div style={headerStyle} >
@@ -107,8 +110,9 @@ const Header = () => {
                 Get Started
                 </a>
     </div>
-    
+      
       <nav style={navStyle}>
+      
       <a
           href="#"
           style={linkStyle}
@@ -123,21 +127,25 @@ const Header = () => {
         >
           Products
         </a>
-      <a
-          href="#"
-          style={linkStyle}
-          onMouseOver={(e) => {
-            e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
-            e.target.style.color = linkHoverStyle.color;
-          }}
-          onMouseOut={(e) => {
-            e.target.style.backgroundColor = linkStyle.backgroundColor;
-            e.target.style.color = linkStyle.color;
-          }}
-        >
-          Solutions
-        </a>
-        <a
+      
+            <a
+                href="#"
+                style={linkStyle}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
+                  e.target.style.color = linkHoverStyle.color;
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = linkStyle.backgroundColor;
+                  e.target.style.color = linkStyle.color;
+                }}
+                onMouseEnter={() => onSolutionsHover(true)} //Trigger visibility on hover
+                onMouseLeave={() => onSolutionsHover(false)} // Hide on mouse leave
+                >
+                Solutions
+                </a>
+          
+                <a
           href="#"
           style={linkStyle}
           onMouseOver={(e) => {
@@ -162,6 +170,7 @@ const Header = () => {
             e.target.style.backgroundColor = linkStyle.backgroundColor;
             e.target.style.color = linkStyle.color;
           }}
+
         >
           Resources
         </a>
@@ -194,7 +203,9 @@ const Header = () => {
           Business
         </a>
         
-      </nav>
+        
+      </nav> 
+      
       </header>
   );
 };
