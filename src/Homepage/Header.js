@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 
-const Header = () => {
+const Header = ({onSolutionsHover}) => {
 
   const headerStyle = {
     backgroundColor: 'black',
@@ -15,6 +15,7 @@ const Header = () => {
     alignItems: 'center', 
     paddingRight: '10px', 
     gap: '10px',
+    position: 'relative', 
   };
 
   const marqueeStyle = {
@@ -138,6 +139,8 @@ const Header = () => {
                   e.target.style.backgroundColor = linkStyle.backgroundColor;
                   e.target.style.color = linkStyle.color;
                 }}
+                onMouseEnter={() => onSolutionsHover(true)} //Trigger visibility on hover
+                onMouseLeave={() => onSolutionsHover(false)} // Hide on mouse leave
                 >
                 Solutions
                 </a>
@@ -167,6 +170,7 @@ const Header = () => {
             e.target.style.backgroundColor = linkStyle.backgroundColor;
             e.target.style.color = linkStyle.color;
           }}
+
         >
           Resources
         </a>

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import customerStoriesImage from './image/remember-geocities-v0-3s6mvjw8l4lc1.png'; 
 
-const Solutions = () => {
+const Solutions = ({isVisible}) => {
+    const [isHovered, setIsHovered] = useState(false);
   const containerStyle = {
     display: 'flex', // Flexbox to align divs side by side
     justifyContent: 'space-between', // Space between columns
@@ -45,10 +46,30 @@ const Solutions = () => {
     backgroundColor: 'lime',
     color: 'black',
   };
-  
+
+  const solutionsStyle = {
+    position: 'absolute',
+    top: '60px', // Adjust to be just below the header (you can change this value)
+    left: '0',
+    width: '100%',
+    height: '100vh', // Full height to cover the content below
+    backgroundColor: 'black',
+    color: 'lime',
+    textAlign: 'center',
+    padding: '20px',
+    fontFamily: 'Courier New, monospace',
+    transition: 'transform 0.5s ease-in-out',
+    transform: isVisible || isHovered ? 'translateY(0)' : 'translateY(-200%)', // Slide down effect
+    zIndex: 10, // Ensure it appears above other content
+  };
   return (
     <div style={containerStyle}>
-      <div style={columnStyle}>
+
+      <div style={solutionsStyle}
+       onMouseEnter={() => setIsHovered(true)} // Keep the popup visible when hovering
+       onMouseLeave={() => setIsHovered(false)} // Hide the popup when mouse leaves
+      >
+        <div style={columnStyle}>
         <h3>Job Roles</h3>
             <div style={eachColumnStyle}>
                 <a href="#"
@@ -198,6 +219,8 @@ const Solutions = () => {
       </div>
       <div style={columnStyle}>
       <h3>Customer Stories</h3>
+            
+            <div style={eachColumnStyle}>
             <a href="#"
             onMouseOver={(e) => {
                 e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
@@ -210,9 +233,8 @@ const Solutions = () => {
             <img 
             src = {customerStoriesImage} 
             alt="Customer Stories" 
-            style={{ width: '100%', height: 'auto', marginBottom: '10px' }} 
+            style={{ width: '50%', height: 'auto', marginBottom: '10px' }} 
         /> </a>
-            <div style={eachColumnStyle}>
                 <a href="#"
                 style={{ color: 'white',}}
                 onMouseOver={(e) => {
@@ -224,6 +246,7 @@ const Solutions = () => {
                     e.target.style.color = linkStyle.color;
                 }}>View all customer stories</a>
             </div>
+      </div>
       </div>
     </div>
   );
