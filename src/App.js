@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import Header from './Homepage/Header';
 import Solutions from './Homepage/Solutions';
 import Products from './Homepage/Products';
-import Pricing from './Homepage/Pricing';
 import Resources from './Homepage/Resources';
-
+import Company from './Homepage/Company';
+import Business from './Homepage/Business';
+import Body from './Homepage/Body'
+import Footer from './Homepage/Footer'
 
 //popup effect
 
@@ -12,15 +14,17 @@ import Resources from './Homepage/Resources';
 function App() {
   const [isSolutionsVisible, setIsSolutionsVisible] = useState(false);
   const [isProductsVisible, setIsProductsVisible] = useState(false);
-  const [isPricingVisible, setIsPricingVisisble] = useState(false);
   const [isResourcesVisible, setIsResourcesVisible] = useState(false);
+  const [isCompanyVisible, setIsCompanyVisible] = useState(false);
+  const [isBusinessVisible, setIsBusinessVisible] = useState(false);
   return (
     <div>
       <Header 
       onSolutionsHover={setIsSolutionsVisible}
       onProductsHover={setIsProductsVisible}
-      onPricingHover={setIsPricingVisisble}
       onResourcesHover = {setIsResourcesVisible}
+      onCompanyHover = {setIsCompanyVisible}
+      onBusinessHover = {setIsBusinessVisible}
       /> 
       <div onMouseEnter={() => setIsSolutionsVisible(true)} 
         onMouseLeave={() => setIsSolutionsVisible(false)}
@@ -34,20 +38,28 @@ function App() {
         <Products isVisible={isProductsVisible}/>
       </div>
       <div
-        onMouseEnter={() => setIsPricingVisisble(true)}
-        onMouseLeave={() => setIsPricingVisisble(false)}>
-      <Pricing isVisible={isPricingVisible}/>
-      </div>
-      <div
         onMouseEnter={() => setIsResourcesVisible(true)}
         onMouseLeave={() => setIsResourcesVisible(false)}>
       <Resources isVisible={isResourcesVisible}/>
       </div>
-      <main style={{ padding: '20px', fontFamily: 'Courier New, monospace' }}>
+      <div
+        onMouseEnter={() => setIsCompanyVisible(true)}
+        onMouseLeave={() => setIsCompanyVisible(false)}>
+      <Company isVisible={isCompanyVisible}/>
+      </div>
+      <div
+        onMouseEnter={() => setIsBusinessVisible(true)}
+        onMouseLeave={() => setIsBusinessVisible(false)}>
+      <Business isVisible={isBusinessVisible}/>
+      </div>
+      <main style={{fontFamily: 'Courier New, monospace' }}>
         <h2>Your Cyber Performance Center</h2>
         <p>Build and sustain high-performing cyber teams keeping your organization protected against real world threats.</p>
-      </main> 
+      </main>
+      <Body/>
+      <Footer/>
     </div>
+    
   );
 }
 
