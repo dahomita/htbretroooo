@@ -19,7 +19,6 @@ The website features 90s music that plays automatically upon opening, setting a 
 - **CSS**: For styling the website with custom styles and hover effects.
 - **HTML5**: For the basic structure of the web pages.
 - **JavaScript**: For dynamic content rendering and event handling.
-- **Audio**: Embedded 90s music using the HTML `<audio>` tag.
 
 ## Installation
 
@@ -35,3 +34,13 @@ To run this project locally, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/hack-the-box.git
+2. Navigate into the project directory:
+cd hack-the-box
+
+3. Install dependencies:
+npm install
+
+4. Start the development server:
+npm start
+
+5. Open your browser and visit http://localhost:3000 to view the website.
