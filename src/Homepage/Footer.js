@@ -34,19 +34,19 @@ const Footer = () => {
         }}
       >
         <a href="/about" style={linkStyle}>
-          About
+          Contact us
         </a>
         <a href="/solutions" style={linkStyle}>
-          Solutions
+          Get Help
         </a>
         <a href="/products" style={linkStyle}>
-          Products
+          Cookie Settings
         </a>
         <a href="/careers" style={linkStyle}>
-          Careers
+          Privacy Policy
         </a>
         <a href="/contact" style={linkStyle}>
-          Contact
+          User Agreement
         </a>
       </nav>
 

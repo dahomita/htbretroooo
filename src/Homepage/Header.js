@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-
+import React from 'react';
 
 const Header = ({
   onSolutionsHover, 
@@ -153,7 +152,7 @@ const Header = ({
                 </a>
           
                 <a
-          href="#"
+          href="#pricingSection" // Scroll to the section with id="pricingSection"
           style={linkStyle}
           onMouseOver={(e) => {
             e.target.style.backgroundColor = linkHoverStyle.backgroundColor;
@@ -163,6 +162,7 @@ const Header = ({
             e.target.style.backgroundColor = linkStyle.backgroundColor;
             e.target.style.color = linkStyle.color;
           }}
+  
   
         >
           Pricing

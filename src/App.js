@@ -8,6 +8,7 @@ import Business from './Homepage/Business';
 import Body from './Homepage/Body'
 import Footer from './Homepage/Footer'
 import GiftComponent from './Homepage/GiftComponent';
+import Pricing from './Homepage/Pricing';
 
 //popup effect
 
@@ -19,7 +20,12 @@ function App() {
   const [isCompanyVisible, setIsCompanyVisible] = useState(false);
   const [isBusinessVisible, setIsBusinessVisible] = useState(false);
   return (
-    <div style={{backgroundColor: 'yellow'}}>
+    <div style={{
+      backgroundColor: 'yellow',
+       
+      
+      
+      }}>
       <Header 
       onSolutionsHover={setIsSolutionsVisible}
       onProductsHover={setIsProductsVisible}
@@ -53,12 +59,15 @@ function App() {
         onMouseLeave={() => setIsBusinessVisible(false)}>
       <Business isVisible={isBusinessVisible}/>
       </div>
-      <main style={{ backgroundColor: 'yellow', fontFamily: 'Courier New, monospace' }}>
+      <main style={{ padding: '20px', backgroundColor: 'yellow', fontFamily: 'Courier New, monospace' }}>
         <h2>Your Cyber Performance Center</h2>
         <p>Build and sustain high-performing cyber teams keeping your organization protected against real world threats.</p>
       </main>
       <Body/>
       <GiftComponent/>
+      <div id="pricingSection">
+        <Pricing/>
+      </div>
       <Footer/>
       
     </div>
