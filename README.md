@@ -2,13 +2,10 @@
 
 Welcome to **Hack The Box**, a platform for building and sustaining high-performing cyber teams to protect organizations against real-world threats. This web application showcases a modern, interactive interface with various sections such as **Solutions**, **Products**, **Resources**, **Company**, and **Business**.
 
-The website features 90s music that plays automatically upon opening, setting a nostalgic atmosphere while navigating through the content.
-
 ## Features
 
 - **Interactive Header**: Includes a navigation bar with links to various sections of the website.
 - **Hover Effects**: Sections like Products, Solutions, Resources, Company, and Business appear dynamically when hovered over.
-- **Music**: Enjoy 90s music playing automatically when the website is loaded.
 - **Main Content**: Displays essential information about the platform and the services it provides.
 - **Responsive Design**: The website is designed to be responsive, ensuring a smooth experience across different devices.
 - **Pricing Section**: A dedicated section for pricing details.
