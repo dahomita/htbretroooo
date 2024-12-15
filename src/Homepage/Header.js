@@ -1,7 +1,13 @@
 import React, {useState} from 'react';
 
 
-const Header = ({onSolutionsHover, onProductsHover}) => {
+const Header = ({
+  onSolutionsHover, 
+  onProductsHover,  
+  onResourcesHover, 
+  onCompanyHover,
+  onBusinessHover,
+}) => {
 
   const headerStyle = {
     backgroundColor: 'black',
@@ -157,6 +163,7 @@ const Header = ({onSolutionsHover, onProductsHover}) => {
             e.target.style.backgroundColor = linkStyle.backgroundColor;
             e.target.style.color = linkStyle.color;
           }}
+  
         >
           Pricing
         </a>
@@ -171,6 +178,7 @@ const Header = ({onSolutionsHover, onProductsHover}) => {
             e.target.style.backgroundColor = linkStyle.backgroundColor;
             e.target.style.color = linkStyle.color;
           }}
+          onMouseEnter={() => onResourcesHover(true)} //Trigger visibility on hover
 
         >
           Resources
@@ -186,6 +194,7 @@ const Header = ({onSolutionsHover, onProductsHover}) => {
             e.target.style.backgroundColor = linkStyle.backgroundColor;
             e.target.style.color = linkStyle.color;
           }}
+          onMouseEnter={() => onCompanyHover(true)}
         >
           Company
         </a>
@@ -200,6 +209,7 @@ const Header = ({onSolutionsHover, onProductsHover}) => {
             e.target.style.backgroundColor = linkStyle.backgroundColor;
             e.target.style.color = linkStyle.color;
           }}
+          onMouseEnter={() => onBusinessHover(true)}
         >
           Business
         </a>
