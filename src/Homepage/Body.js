@@ -2,82 +2,95 @@ import React from 'react';
 import bookingcom from './image/bookingcom-1.png';
 import statefarm from './image/1920_sf-logo-vertical-reversed.png';
 import securityrisk from './image/301802730_404660791801222_6250245496042440114_n.jpg';
+import puma from './image/puma-logo-png-transparent.png';
+import nyu from './image/new-york-university.jpg';
+import deloitte from './image/partner-deloitte.jpg';
+import intel from './image/images.png';
+import siemens from './image/siemens.png';
+import adeptis from './image/images.jpeg';
+import aws from './image/KRgw2UkV_400x400.jpg';
+import synack from './image/synack-logo-vertical-blue-black-RGB-nasdaq.png';
+import faraday from './image/images (1).png';
+import nordea from './image/images (2).png';
+import nviso from './image/attachment_132472488.jpeg';
+import usf from './image/unnamed.png';
+
 
 const partners = [
   {
     name: 'Booking.com.',
     logo: bookingcom,
-    description: 'Specializes in advanced threat detection.',
+    description: 'Global travel platform for seamless bookings.',
   },
   {
     name: 'StateFarm',
     logo: statefarm,
-    description: 'Leading provider of endpoint security solutions.',
+    description: 'Trusted insurance provider for life uncertainties',
   },
   {
     name: 'Security Risk',
     logo: securityrisk, 
-    description: 'Focuses on secure cloud-based services.',
+    description: 'Mitigating threats, safeguarding digital assets.',
   },
   {
     name: 'PUMA',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: puma,
+    description: 'Sporty footwear, apparel, and accessories.',
   },
   {
     name: 'NYU',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: nyu,
+    description: 'Innovation-driven education and global research.',
   },
   {
     name: 'Deloitte.',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
+    logo: deloitte,
     description: 'Expert in network defense systems.',
   },
   {
     name: 'intel',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: intel,
+    description: 'Innovating advanced technology for global progress.',
   },
   {
     name: 'SIEMENS',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: siemens,
+    description: 'Transforming industries with innovative engineering solutions.',
   },
   {
     name: 'Adeptis',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: adeptis,
+    description: 'Specialists in cybersecurity recruitment and talent.',
   },
   {
     name: 'AWS',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: aws,
+    description: 'Cloud computing services for scalable solutions.',
   },
   {
     name: 'Synack',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: synack,
+    description: 'Crowdsourced security testing for vulnerability discovery.',
   },
   {
     name: 'Faraday',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: faraday,
+    description: 'Collaborative penetration testing and vulnerability management platform.',
   },
   {
     name: 'Nordea',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: nordea, 
+    description: 'Leading financial services group in Northern Europe.',
   },
   {
     name: 'nviso',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: nviso, 
+    description: 'Cybersecurity consultancy specializing in risk management.',
   },
   {
     name: 'USF',
-    logo: 'https://via.placeholder.com/100', // Replace with actual logo URL
-    description: 'Expert in network defense systems.',
+    logo: usf,
+    description: 'Leading university focused on innovation and research.',
   },
 ];
 

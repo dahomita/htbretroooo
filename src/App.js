@@ -7,6 +7,7 @@ import Company from './Homepage/Company';
 import Business from './Homepage/Business';
 import Body from './Homepage/Body'
 import Footer from './Homepage/Footer'
+import GiftComponent from './Homepage/GiftComponent';
 
 //popup effect
 
@@ -57,7 +58,9 @@ function App() {
         <p>Build and sustain high-performing cyber teams keeping your organization protected against real world threats.</p>
       </main>
       <Body/>
+      <GiftComponent/>
       <Footer/>
+      
     </div>
     
   );
